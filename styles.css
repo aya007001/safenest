@@ -1,4 +1,4 @@
-/* Base Reset & Variables */
+/* Base Reset */
 
 :root {
     --primary-dark: #4e342e;
@@ -25,7 +25,7 @@ body {
 }
 
 
-/* Typography */
+/* Font Type */
 
 .dancing-script {
     font-family: 'Dancing Script', cursive;
@@ -65,7 +65,7 @@ body {
 }
 
 
-/* Header Styles */
+/* Header*/
 
 header {
     text-align: center;
@@ -132,7 +132,7 @@ header p {
 }
 
 
-/* Button Styles */
+/* Button */
 
 button {
     border: none;
@@ -195,8 +195,42 @@ button {
     align-items: center;
     gap: 15px;
 }
+/****************/
+/* Response Container Styles */
+.response-container {
+    max-width: 500px;
+    margin: 20px auto;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
 
+.response-container.show {
+    display: flex; 
+}
 
+.response-bubble {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border: 1px solid var(--accent-color);
+    width: 100%;
+}
+
+.try-another-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+/****************************/
 /* Support Messages Section */
 
 #support-messages {
@@ -238,8 +272,6 @@ button {
 }
 
 
-/* Updated Response Container Styles - Hidden by default */
-
 .hidden {
     display: none !important;
 }
@@ -250,14 +282,12 @@ button {
     padding: 0;
     transition: all 0.5s ease;
     display: none;
-    /* Hidden by default */
     flex-direction: column;
     align-items: center;
 }
 
 .response-container.visible {
     display: flex;
-    /* Show when active */
     padding: 20px;
 }
 
