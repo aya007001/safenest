@@ -106,3 +106,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Support Messages Interaction
+const messageButtons = document.querySelectorAll('.message-btn');
+const responseContainer = document.querySelector('.response-container');
+const responseText = document.querySelector('.response-text');
+const tryAnotherBtn = document.querySelector('.try-another-btn');
+
+messageButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const response = this.getAttribute('data-response');
+        responseText.textContent = response;
+        document.querySelector('.message-buttons').style.display = 'none';
+        responseContainer.classList.add('show');
+        responseContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+});
+
+tryAnotherBtn.addEventListener('click', function() {
+    responseContainer.classList.remove('show');
+    document.querySelector('.message-buttons').style.display = 'grid';
+    document.querySelector('.message-buttons').scrollIntoView({ behavior: 'smooth' });
+});
