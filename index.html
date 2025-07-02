@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNest - Mental Wellness Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main header section -->
+    <section class="fullscreen" id="welcome">
+        <div class="content">
+            <header>
+                <div class="header-images">
+                    <div class="image-wrapper">
+                        <img src="pics/meditation.jpg" alt="Person meditating" class="side-image">
+                    </div>
+                    <div class="header-text">
+                        <h1>Feeling low?<br><span>You've found your nest.</span></h1>
+                        <p>A cozy online space to rest, heal, and feel understood.</p>
+                        <p class="comfort-text">Sometimes, you just need a moment. And that's okay.</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="pics/reading.jpg" alt="Person reading" class="side-image">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="main-btn" onclick="window.location.href='mental-health-articles.html'">
+                        Why Do I Feel Like This?
+                    </button>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <!-- Support Messages Section -->
+    <section class="fullscreen-section" id="support-messages">
+        <div class="section-content">
+            <h2 class="dancing-script">You're Not Alone</h2>
+            <p>Click a message that resonates with you:</p>
+
+            <div class="message-buttons">
+                <button class="message-btn" data-response="“Rest is not giving up. It's part of healing.”"><i class="fas fa-cloud"></i> "I'm tired of everything..."</button>
+                <button class="message-btn" data-response="“You matter more than you know. Even if it doesn't feel like it right now.”"><i class="fas fa-heart"></i> "No one really cares."</button>
+                <button class="message-btn" data-response="“You've made it through hard days before. This moment will pass too.”"><i class="fas fa-history"></i> "I can't do this anymore."</button>
+                <button class="message-btn" data-response="“You are not broken, you are healing in your own time.”"><i class="fas fa-puzzle-piece"></i> "I feel broken."</button>
+                <button class="message-btn" data-response="“Mistakes don't define you. Learning is part of growth.”"><i class="fas fa-seedling"></i> "Everything I do is wrong."</button>
+                <button class="message-btn" data-response="“Your feelings are real — and you are not the only one who feels this way.”"><i class="fas fa-user-friends"></i> "I'm so alone."</button>
+            </div>
+
+            <div class="response-container hidden">
+                <div class="response-bubble">
+                    <p class="response-text"></p>
+                </div>
+                <button class="primary-btn try-another-btn">Try Another</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breathing Exercise Section -->
+    <section class="fullscreen-section" id="breathing-exercise">
+        <div class="section-content">
+            <h2 class="dancing-script">Breathe With Me</h2>
+            <p>A 30-second calming space</p>
+
+            <div class="breathing-container">
+                <div class="breathing-circle">
+                    <div class="circle-background"></div>
+                    <div class="circle-animation"></div>
+                    <span class="breath-text">Ready to Begin</span>
+                </div>
+                <div class="breathing-controls">
+                    <button class="primary-btn" id="start-breathing">
+                        <i class="fas fa-play"></i> Start Breathing Exercise
+                    </button>
+                    <button class="secondary-btn hidden" id="stop-breathing">
+                        <i class="fas fa-stop"></i> Stop Exercise
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="fullscreen-section" id="about">
+        <div class="section-content">
+            <h2 class="dancing-script">About SafeNest</h2>
+            <div class="about-content">
+                <div class="about-item">
+                    <i class="fas fa-dove"></i>
+                    <p>SafeNest is a gentle digital space built for people navigating emotional overwhelm, stress, or quiet pain especially when words feel heavy and the world feels too loud.</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <p>We're not a therapy platform. We're not here to diagnose or treat. We are here to offer what often goes missing in tough moments: Stillness. Understanding. And a moment to breathe.</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Through calming tools, reflective prompts, and kind messages shared by thousands, SafeNest helps you pause, feel, and reconnect even if just for a few minutes.</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-home"></i>
+                    <p>No sign-ups. No pressure. No fixing. Just soft reminders that you matter, even when it's hard to believe it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="fullscreen-section" id="newsletter">
+        <div class="section-content">
+            <h2 class="dancing-script">Want gentle moments sent to you?</h2>
+            <p>Let quiet comfort find you now and then.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="primary-btn"><i class="fas fa-paper-plane"></i> Send Me Softness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3 class="dancing-script">SafeNest</h3>
+                <p>2025 SafeNest. All rights reserved.</p>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#welcome"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#support-messages"><i class="fas fa-comment-dots"></i> Messages</a></li>
+                    <li><a href="#breathing-exercise"><i class="fas fa-wind"></i> Breathe</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
